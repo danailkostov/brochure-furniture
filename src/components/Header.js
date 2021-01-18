@@ -1,10 +1,18 @@
 import { AppBar, Grid, Toolbar, Typography } from "@material-ui/core";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import React from "react";
+import {makeStyles} from '@material-ui/styles'
+
+const useStyles = makeStyles({
+  root: {
+    background: 'black'
+  }
+})
 
 const Header = () => {
+  const classes = useStyles();
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.root}>
       <Grid container>
         <Grid item xs={1} xl={2}></Grid>
         <Grid item xs={10} xl={8}>
