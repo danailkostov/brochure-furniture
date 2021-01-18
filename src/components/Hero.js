@@ -16,11 +16,11 @@ const Hero = () => {
   const classes = useStyles();
   return (
       <Grid container className={classes.contStyles}>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={4}>
+        <Grid item xs={1} lg={3}></Grid>
+        <Grid item xs={10} lg={6}>
           <HeroCard />
         </Grid>
-        <Grid item xs={4}></Grid>
+        <Grid item xs={1} lg={3}></Grid>
       </Grid>
   );
 };
