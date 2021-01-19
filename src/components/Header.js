@@ -1,8 +1,9 @@
-import { AppBar, Grid, Toolbar, Hidden, Button } from "@material-ui/core";
+import { AppBar, Grid, Toolbar, Hidden, Tabs, Tab } from "@material-ui/core";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import BurgerMenu from '../components/BurgerMenu'
+import BurgerMenu from "../components/BurgerMenu";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -11,11 +12,16 @@ const useStyles = makeStyles({
   gridItem: {
     marginLeft: "25px",
   },
+  
 });
-
 
 const Header = () => {
   const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <AppBar position="static" className={classes.root}>
       <Grid container>
@@ -30,19 +36,15 @@ const Header = () => {
               <Grid item xs={3}>
                 <BrandingWatermarkIcon />
               </Grid>
-              <Grid item xs={5}></Grid>
+              <Grid item xs={3}></Grid>
               <Hidden only={["xs", "sm", "md"]}>
-                <Grid item xs={1}>
-                  <Button color="inherit">Начало</Button>
-                </Grid>
-                <Grid item xs={1}>
-                  <Button color="inherit">За нас</Button>
-                </Grid>
-                <Grid item xs={1}>
-                  <Button color="inherit">Услуги</Button>
-                </Grid>
-                <Grid item xs={1}>
-                  <Button color="inherit">Контакт</Button>
+                <Grid item xs={6}>
+                  <Tabs value={value} onChange={handleChange}>
+                    <Tab label="Начало" to="/" component={Link} />
+                    <Tab label="За Нас" to="/about" component={Link} />
+                    <Tab label="Услуги" to="/services" component={Link} />
+                    <Tab label="Контакт" to="/contact" component={Link} />
+                  </Tabs>
                 </Grid>
               </Hidden>
             </Grid>
