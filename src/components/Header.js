@@ -2,7 +2,6 @@ import { AppBar, Grid, Toolbar, Hidden, Button } from "@material-ui/core";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import ServiceMenu from "../components/ServiceMenu";
 import BurgerMenu from '../components/BurgerMenu'
 
 const useStyles = makeStyles({
@@ -22,8 +21,7 @@ const Header = () => {
       <Grid container>
         <Grid item xs={4} lg={1} xl={2} container alignItems="center">
           <Hidden only={["lg", "xl"]}>
-            
-                <BurgerMenu />  
+            <BurgerMenu />
           </Hidden>
         </Grid>
         <Grid item xs={4} lg={10} xl={8}>
@@ -41,7 +39,7 @@ const Header = () => {
                   <Button color="inherit">За нас</Button>
                 </Grid>
                 <Grid item xs={1}>
-                  <ServiceMenu />
+                  <Button color="inherit">Услуги</Button>
                 </Grid>
                 <Grid item xs={1}>
                   <Button color="inherit">Контакт</Button>
