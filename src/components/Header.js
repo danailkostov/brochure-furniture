@@ -1,9 +1,9 @@
-import { AppBar, Grid, Toolbar, Typography, Hidden, Button } from "@material-ui/core";
+import { AppBar, Grid, Toolbar, Hidden, Button } from "@material-ui/core";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import MenuIcon from "@material-ui/icons/Menu";
-import ServiceMenu from '../components/ServiceMenu'
+import ServiceMenu from "../components/ServiceMenu";
+import BurgerMenu from '../components/BurgerMenu'
 
 const useStyles = makeStyles({
   root: {
@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
+
 const Header = () => {
   const classes = useStyles();
   return (
@@ -21,7 +22,8 @@ const Header = () => {
       <Grid container>
         <Grid item xs={4} lg={1} xl={2} container alignItems="center">
           <Hidden only={["lg", "xl"]}>
-            <MenuIcon className={classes.gridItem} />
+            
+                <BurgerMenu />  
           </Hidden>
         </Grid>
         <Grid item xs={4} lg={10} xl={8}>
@@ -33,17 +35,16 @@ const Header = () => {
               <Grid item xs={5}></Grid>
               <Hidden only={["xs", "sm", "md"]}>
                 <Grid item xs={1}>
-                  <Button color="inherit">Home</Button>
+                  <Button color="inherit">Начало</Button>
                 </Grid>
                 <Grid item xs={1}>
-                  <Button color="inherit">About</Button>
+                  <Button color="inherit">За нас</Button>
                 </Grid>
                 <Grid item xs={1}>
-                  {/* <Typography>Services</Typography> */}
                   <ServiceMenu />
                 </Grid>
                 <Grid item xs={1}>
-                  <Button color="inherit">Contact</Button>
+                  <Button color="inherit">Контакт</Button>
                 </Grid>
               </Hidden>
             </Grid>
