@@ -1,8 +1,9 @@
-import { AppBar, Grid, Toolbar, Typography, Hidden } from "@material-ui/core";
+import { AppBar, Grid, Toolbar, Typography, Hidden, Button } from "@material-ui/core";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import MenuIcon from "@material-ui/icons/Menu";
+import ServiceMenu from '../components/ServiceMenu'
 
 const useStyles = makeStyles({
   root: {
@@ -32,16 +33,17 @@ const Header = () => {
               <Grid item xs={5}></Grid>
               <Hidden only={["xs", "sm", "md"]}>
                 <Grid item xs={1}>
-                  <Typography>Home</Typography>
+                  <Button color="inherit">Home</Button>
                 </Grid>
                 <Grid item xs={1}>
-                  <Typography>About</Typography>
+                  <Button color="inherit">About</Button>
                 </Grid>
                 <Grid item xs={1}>
-                  <Typography>Services</Typography>
+                  {/* <Typography>Services</Typography> */}
+                  <ServiceMenu />
                 </Grid>
                 <Grid item xs={1}>
-                  <Typography>Contact</Typography>
+                  <Button color="inherit">Contact</Button>
                 </Grid>
               </Hidden>
             </Grid>
