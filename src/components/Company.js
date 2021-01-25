@@ -1,12 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -16,15 +18,12 @@ const useStyles = makeStyles({
     height: 140,
     border: "10px solid white",
   },
-  containerBorder: {
-    // border: "1px solid grey", this is for the Card
-  },
 });
 
 const Company = () => {
   const classes = useStyles();
   return (
-    <Card className={classes.containerBorder}>
+    <Card>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -37,13 +36,13 @@ const Company = () => {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica 
+            species, ranging across all continents except Antarctica
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          повече...
         </Button>
       </CardActions>
     </Card>

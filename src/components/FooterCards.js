@@ -1,21 +1,17 @@
 import React from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import { Box } from "@material-ui/core";
+import { Box, Card, CardContent, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   root: {
     background: "transparent",
     color: "white",
-    borderRadius: '0px',
-    boxShadow: 'none',
-    borderLeft: '1px solid white',
-    borderRight: '1px solid white',
-    marginTop: '30px',
-    marginBottom: '30px',
-
+    borderRadius: "0px",
+    boxShadow: "none",
+    borderLeft: "1px solid white",
+    borderRight: "1px solid white",
+    marginTop: "30px",
+    marginBottom: "30px",
   },
 });
 

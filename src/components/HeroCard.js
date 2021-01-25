@@ -1,11 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import { Box, Container, Divider, Grid } from "@material-ui/core";
+import {
+  Box,
+  Divider,
+  Card,
+  CardActions,
+  CardContent,
+  Button,
+  Typography,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -15,8 +18,8 @@ const useStyles = makeStyles({
     border: "none",
     boxShadow: "none",
     borderRadius: "0px",
-    background: 'transparent',
-    color: 'white',
+    background: "transparent",
+    color: "white",
   },
 });
 

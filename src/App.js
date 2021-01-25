@@ -1,9 +1,6 @@
-import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Content from "./components/Content";
-import Footer from "./components/Footer";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -12,7 +9,7 @@ import Services from "./pages/Services";
 function App() {
   return (
     <Router>
-      <Header />
+      <Navbar />
       <Switch>
         <Route exact path="/">
           <Home />
