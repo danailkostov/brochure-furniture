@@ -1,13 +1,14 @@
 import React from "react";
 import { AppBar, Grid, Toolbar, Hidden, Tabs, Tab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import { Link  } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import BurgerMenu from "./BurgerMenu";
 
 const useStyles = makeStyles({
   root: {
-    background: "black",
+    background: "#e2dff0",
+    color: "#802634",
   },
   gridItem: {
     marginLeft: "25px",
