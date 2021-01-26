@@ -7,8 +7,7 @@ import BurgerMenu from "./BurgerMenu";
 
 const useStyles = makeStyles({
   root: {
-    background: "#e2dff0",
-    color: "#802634",
+    boxShadow: 'none',
   },
   gridItem: {
     marginLeft: "25px",
@@ -20,13 +19,8 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
-    <AppBar position="static" className={classes.root}>
+    <AppBar  className={classes.root} color='transparent' position='absolute'>
       <Grid container>
         <Grid item xs={4} lg={1} xl={2} container alignItems="center">
           <Hidden only={["lg", "xl"]}>
@@ -42,7 +36,7 @@ const Navbar = () => {
               <Grid item xs={5}></Grid>
               <Hidden only={["xs", "sm", "md"]}>
                 <Grid item xs={4}>
-                  <Tabs value={value} onChange={handleChange}>
+                  <Tabs>
                     <Tab
                       label="Начало"
                       to="/"

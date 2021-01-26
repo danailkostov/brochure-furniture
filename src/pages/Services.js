@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     backgroundColor: "#e2dff0",
     color: "#802634",
     paddingBottom: "20px",
+    paddingTop: '30px'
   },
 });
 //#DAA03D
