@@ -1,6 +1,5 @@
 import {
   Grid,
-  Paper,
   Typography,
   Card,
   CardContent,
@@ -26,7 +25,7 @@ const About = () => {
       <Grid item xs={3} container>
         <Grid item xs={12}>
           <img
-            style={{ height: "550px", width: "400px" }}
+            style={{ height: "550px", width: "100%" }}
             src="https://images.unsplash.com/photo-1511376979163-f804dff7ad7b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHdlbGNvbWUlMjBtZWV0aW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
@@ -38,7 +37,7 @@ const About = () => {
           item
           xs={12}
           style={{
-            paddingLeft: "50px",
+            paddingLeft: "30px",
           }}
         >
           <Card
@@ -85,6 +84,8 @@ const About = () => {
               backgroundColor: "#802634",
               color: "#e2dff0",
               paddingTop: "15px",
+              borderRadius: '5px',
+              marginLeft: '5px'
             }}
           >
             <Typography>20</Typography>
@@ -114,7 +115,6 @@ const About = () => {
             <Card
               style={{
                 textAlign: "center",
-                boxShadow: "none",
                 backgroundColor: "#e2dff0",
                 width: "170px",
               }}
@@ -138,7 +138,6 @@ const About = () => {
             <Card
               style={{
                 textAlign: "center",
-                boxShadow: "none",
                 backgroundColor: "#e2dff0",
                 width: "170px",
               }}
@@ -162,7 +161,6 @@ const About = () => {
             <Card
               style={{
                 textAlign: "center",
-                boxShadow: "none",
                 backgroundColor: "#e2dff0",
                 width: "170px",
               }}
@@ -186,7 +184,6 @@ const About = () => {
             <Card
               style={{
                 textAlign: "center",
-                boxShadow: "none",
                 backgroundColor: "#e2dff0",
                 width: "170px",
               }}
