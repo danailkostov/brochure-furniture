@@ -36,11 +36,13 @@ const HeroCard = () => {
           <Typography variant="body2" component="p">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem modi
             reiciendis quis omnis rerum delectus quos aut non quod consequatur.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem modi
+            reiciendis quis omnis rerum delectus quos aut non quod consequatur.
           </Typography>
         </CardContent>
         <Box display="flex" justifyContent="center">
           <CardActions>
-            <Button color="primary" variant="contained">
+            <Button color="#802634" variant="contained">
               Learn More
             </Button>
           </CardActions>
