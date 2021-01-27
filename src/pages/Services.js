@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   gridStyles: {
     backgroundColor: "#e2dff0",
     color: "#802634",
-    paddingBottom: "20px",
+    paddingBottom: "70px",
     paddingTop: '30px'
   },
 });
@@ -29,7 +29,7 @@ const Services = () => {
         xs={12}
         container
         alignItems="center"
-        style={{ paddingBottom: "20px", paddingTop: "20px" }}
+        style={{ paddingBottom: "50px", paddingTop: "20px" }}
       >
         <Grid item xs={2}></Grid>
         <Grid item xs={3}>
