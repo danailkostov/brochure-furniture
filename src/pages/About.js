@@ -45,7 +45,7 @@ const About = () => {
         item
         container
         style={{
-          height: "60vh",
+          // height: "60vh",
           backgroundColor: "#e2dff0",
         }}
       >
@@ -140,7 +140,7 @@ const About = () => {
         <Grid item xs={3}></Grid>
         <Grid item xs={1} md={3}></Grid>
         <Grid item xs={10} md={6} container justify="space-between" spacing={2}>
-          <Grid item xs={5} md={4}>
+          <Grid item xs={12} sm={5} md={4}>
             <Card
               style={{
                 textAlign: "-webkit-center",
@@ -186,7 +186,7 @@ const About = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={5} md={4}>
+          <Grid item xs={12} sm={5} md={4}>
             <Card
               style={{
                 textAlign: "-webkit-center",
