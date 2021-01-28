@@ -1,5 +1,4 @@
 import React from "react";
-import FooterCards from "../components/FooterCards";
 import {
   AppBar,
   Grid,
@@ -7,7 +6,6 @@ import {
   Typography,
   Link,
   Box,
-  Hidden,
 } from "@material-ui/core";
 import MailIcon from "@material-ui/icons/Mail";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -18,6 +16,8 @@ import { makeStyles } from "@material-ui/styles";
 const useStyles = makeStyles({
   root: {
     background: "#283345",
+    padding: "10px 0",
+    boxShadow: "none",
   },
 });
 
@@ -25,20 +25,6 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
-      <Grid container>
-        <Grid item xs={2} md={3} xl={4}></Grid>
-        <Grid item xs={8} md={3} xl={2}>
-          <FooterCards />
-        </Grid>
-        <Hidden only={["md", "lg", "xl"]}>
-          <Grid item xs={2} md={0} />
-          <Grid item xs={2} md={0} />
-        </Hidden>
-        <Grid item xs={8} md={3} xl={2}>
-          <FooterCards />
-        </Grid>
-        <Grid item xs={2} md={3} xl={1}></Grid>
-      </Grid>
       <AppBar position="static" className={classes.root}>
         <Grid container>
           <Grid item xs={0}></Grid>

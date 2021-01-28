@@ -1,145 +1,190 @@
-import {
-  Card,
-  CardContent,
-  Divider,
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Grid, Hidden, Typography } from "@material-ui/core";
 import React from "react";
-import { makeStyles } from "@material-ui/styles";
-const useStyles = makeStyles({
-  gridStyles: {
-    backgroundColor: "#e2dff0",
-    color: "#802634",
-    paddingBottom: "70px",
-    paddingTop: '30px'
-  },
-});
-//#DAA03D
-//#616427
+import installService from "../images/install.jpg";
+import deliveryService from "../images/delivery.jpg";
+import loadingService from "../images/loading.png";
+
 const Services = () => {
-  const classes = useStyles();
   return (
-    // <div>
-    //     Services Page
-    // </div>
-    <Grid container className={classes.gridStyles}>
-      <Grid
-        item
-        xs={12}
-        container
-        alignItems="center"
-        style={{ paddingBottom: "50px", paddingTop: "20px" }}
-      >
+    <Grid container direction="column" style={{ padding: "70px 0" }}>
+      <Grid item container>
         <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
-          <Divider />
-        </Grid>
-        <Grid item xs={2}>
-          <Typography align="center">What We Offer</Typography>
-        </Grid>
-        <Grid item xs={3} style={{ color: "#aeabba" }}>
-          <Divider />
+        <Grid
+          item
+          xs={8}
+          style={{ borderBottom: "1px solid #802634", color: "#802634" }}
+        >
+          <Typography variant="h4" align="center" gutterBottom>
+            Какви Са Нашите Услуги
+          </Typography>
         </Grid>
         <Grid item xs={2}></Grid>
       </Grid>
-      <Grid item xs={12} container spacing={5}>
+      {/* Content start*/}
+      {/* First Couple */}
+      <Grid item container style={{ paddingTop: "100px" }}>
         <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
+        <Grid item xs={8} md={3}>
           <img
-            style={{ width: "100%", borderRadius: "15%" }}
-            src="https://images.unsplash.com/photo-1604618161221-fc0055072d1a?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
+            src={installService}
+            alt="install"
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "15px",
+              border: "1px solid #802634",
+            }}
           />
         </Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
-          <Card
-            style={{
-              boxShadow: "none",
-              color: "#802634",
-            }}
-          >
-            <CardContent style={{ backgroundColor: "#e2dff0" }}>
-              <Typography component="h5" variant="h5">
-                Монтаж
-              </Typography>
-              <Typography variant="subtitle1" color="inherit">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                blanditiis eum dolor id dolorum quae enim praesentium dolores
-                sed voluptatem? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eos, blanditiis eum dolor id dolorum quae enim
-                praesentium dolores sed voluptatem?
-              </Typography>
-            </CardContent>
-          </Card>
+        <Hidden only={["xs", "sm"]}>
+          <Grid
+            item
+            md={2}
+            style={{ alignSelf: "center", borderTop: "2px solid #802634" }}
+          ></Grid>
+        </Hidden>
+        <Hidden only={["md", "lg", "xl"]}>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={2}></Grid>
+        </Hidden>
+        <Grid
+          item
+          xs={8}
+          md={3}
+          style={{
+            borderRadius: "15px",
+            border: "1px solid #802634",
+            padding: "15px",
+          }}
+          container
+        >
+          <Grid item style={{ alignSelf: "center", color: "#802634" }}>
+            <Typography align="center" variant="h4">
+              Монтаж
+            </Typography>
+            <Typography align="center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              iure dicta a modi eum. Ea. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Optio iure dicta a modi eum. Ea. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Optio iure dicta a
+              modi eum. Ea. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.
+            </Typography>
+          </Grid>
         </Grid>
         <Grid item xs={2}></Grid>
-
-        <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
-          <Card
-            style={{
-              boxShadow: "none",
-              color: "#802634",
-            }}
-          >
-            <CardContent style={{ backgroundColor: "#e2dff0" }}>
-              <Typography component="h5" variant="h5">
-                Качване
-              </Typography>
-              <Typography variant="subtitle1" color="inherit">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                blanditiis eum dolor id dolorum quae enim praesentium dolores
-                sed voluptatem? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eos, blanditiis eum dolor id dolorum quae enim
-                praesentium dolores sed voluptatem?
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
-          <img
-            style={{ width: "100%", borderRadius: "15%" }}
-            src="https://images.unsplash.com/photo-1604618161221-fc0055072d1a?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-        </Grid>
-        <Grid item xs={2}></Grid>
-
-        <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
-          <img
-            style={{ width: "100%", borderRadius: "15%" }}
-            src="https://images.unsplash.com/photo-1604618161221-fc0055072d1a?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-        </Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={3}>
-          <Card
-            style={{
-              boxShadow: "none",
-              color: "#802634",
-            }}
-          >
-            <CardContent style={{ backgroundColor: "#e2dff0" }}>
-              <Typography component="h5" variant="h5">
-                Доставка
-              </Typography>
-              <Typography variant="subtitle1" color="inherit">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                blanditiis eum dolor id dolorum quae enim praesentium dolores
-                sed voluptatem? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Eos, blanditiis eum dolor id dolorum quae enim
-                praesentium dolores sed voluptatem?
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={2}></Grid>
+        {/* First Couple */}
       </Grid>
+      {/* Second Couple */}
+      <Grid item container style={{ paddingTop: "100px" }}>
+        <Grid item xs={2}></Grid>
+        <Grid
+          item
+          xs={8}
+          md={3}
+          style={{
+            borderRadius: "15px",
+            border: "1px solid #802634",
+            padding: "15px",
+          }}
+          container
+        >
+          <Grid item style={{ alignSelf: "center", color: "#802634" }}>
+            <Typography align="center" variant="h4">
+              Доставка
+            </Typography>
+            <Typography align="center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              iure dicta a modi eum. Ea. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Optio iure dicta a modi eum. Ea. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Optio iure dicta a
+              modi eum. Ea. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Hidden only={["xs", "sm"]}>
+          <Grid
+            item
+            xs={2}
+            style={{ alignSelf: "center", borderTop: "2px solid #802634" }}
+          ></Grid>
+        </Hidden>
+        <Hidden only={["md", "lg", "xl"]}>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={2}></Grid>
+        </Hidden>
+
+        <Grid item xs={8} md={3}>
+          <img
+            src={deliveryService}
+            alt="install"
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "15px",
+              border: "1px solid #802634",
+            }}
+          />
+        </Grid>
+        <Grid item xs={2}></Grid>
+        {/* Second Couple */}
+      </Grid>
+      {/* Third Couple */}
+      <Grid item container style={{ paddingTop: "100px" }}>
+        <Grid item xs={2}></Grid>
+        <Grid item xs={8} md={3}>
+          <img
+            src={loadingService}
+            alt="install"
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "15px",
+              border: "1px solid #802634",
+            }}
+          />
+        </Grid>
+        <Hidden only={["xs", "sm"]}>
+          <Grid
+            item
+            xs={2}
+            style={{ alignSelf: "center", borderTop: "2px solid #802634" }}
+          ></Grid>
+        </Hidden>
+        <Hidden only={["md", "lg", "xl"]}>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={2}></Grid>
+        </Hidden>
+        <Grid
+          item
+          xs={8}
+          md={3}
+          style={{
+            borderRadius: "15px",
+            border: "1px solid #802634",
+            padding: "15px",
+          }}
+          container
+        >
+          <Grid item style={{ alignSelf: "center", color: "#802634" }}>
+            <Typography align="center" variant="h4">
+              Качване
+            </Typography>
+            <Typography align="center">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              iure dicta a modi eum. Ea. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Optio iure dicta a modi eum. Ea. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Optio iure dicta a
+              modi eum. Ea. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid item xs={2}></Grid>
+        {/* Third Couple */}
+      </Grid>
+      {/* Content end */}
     </Grid>
   );
 };

@@ -9,6 +9,7 @@ import {
   CardActionArea,
   Avatar,
   Link,
+  Hidden,
 } from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -20,6 +21,7 @@ import React from "react";
 const About = () => {
   return (
     <Grid container direction="column" spacing={2}>
+      {/* About us Header */}
       <Grid
         item
         container
@@ -28,14 +30,17 @@ const About = () => {
           backgroundColor: "#802634",
         }}
       >
-        <Grid item xs={5}></Grid>
-        <Grid item xs={2} style={{ alignSelf: "center", color: "#e2dff0" }}>
+        <Grid item xs={3}></Grid>
+        <Grid item xs={6} style={{ alignSelf: "center", color: "#e2dff0" }}>
           <Typography align="center" variant="h3">
             ABOUT US
           </Typography>
         </Grid>
-        <Grid item xs={5}></Grid>
+        <Grid item xs={3}></Grid>
       </Grid>
+      {/* About us Header */}
+
+      {/* About us Content */}
       <Grid
         item
         container
@@ -44,15 +49,15 @@ const About = () => {
           backgroundColor: "#e2dff0",
         }}
       >
-        <Grid item xs={3}></Grid>
+        <Grid item xs={1} lg={3}></Grid>
         <Grid
           item
-          xs={6}
+          xs={10}
+          lg={6}
           container
-          spacing={10}
           style={{ backgroundColor: "#802634", margin: "100px 0px" }}
         >
-          <Grid item xs={7}>
+          <Grid item xs={12} md={7} style={{ alignSelf: "center", padding: "10px" }}>
             <Card
               style={{
                 backgroundColor: "#802634",
@@ -62,7 +67,7 @@ const About = () => {
             >
               <CardContent>
                 <Typography
-                  style={{ borderBottom: "1px solid #e2dff0", width: "4vw" }}
+                  style={{ borderBottom: "1px solid #e2dff0", width: "12vw" }}
                 >
                   About Us
                 </Typography>
@@ -84,28 +89,32 @@ const About = () => {
               </CardActions>
             </Card>
           </Grid>
-          <Grid
-            item
-            xs={5}
-            style={{
-              alignSelf: "center",
-              position: "relative",
-              left: "5vw",
-              padding: "40px 0px",
-            }}
-          >
-            <Card style={{ border: "1px solid white" }}>
-              <CardActionArea>
-                <CardMedia
-                  style={{ height: "25vh" }}
-                  image="https://images.unsplash.com/photo-1611689225620-3e70248bc0f0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                />
-              </CardActionArea>
-            </Card>
-          </Grid>
+          <Hidden only={["xs", "sm"]}>
+            <Grid
+              item
+              xs={5}
+              style={{
+                alignSelf: "center",
+                position: "relative",
+                left: "5vw",
+                padding: "40px 0px",
+              }}
+            >
+              <Card style={{ border: "1px solid white" }}>
+                <CardActionArea>
+                  <CardMedia
+                    style={{ height: "25vh" }}
+                    image="https://images.unsplash.com/photo-1611689225620-3e70248bc0f0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  />
+                </CardActionArea>
+              </Card>
+            </Grid>
+          </Hidden>
         </Grid>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={1}></Grid>
       </Grid>
+      {/* About us Content */}
+      {/* Staff Content */}
       <Grid
         item
         container
@@ -114,8 +123,8 @@ const About = () => {
           paddingBottom: "130px",
         }}
       >
-        <Grid item xs={4}></Grid>
-        <Grid item xs={4} style={{ color: "#e2dff0", paddingTop: "15px" }}>
+        <Grid item xs={3}></Grid>
+        <Grid item xs={6} style={{ color: "#e2dff0", paddingTop: "15px" }}>
           <Typography align="center">ABOUT US</Typography>
           <br />
           <Typography align="center" variant="h3">
@@ -128,10 +137,10 @@ const About = () => {
           </Typography>
           <br />
         </Grid>
-        <Grid item xs={4}></Grid>
         <Grid item xs={3}></Grid>
-        <Grid item xs={6} container justify="space-between">
-          <Grid item xs={3}>
+        <Grid item xs={1} md={3}></Grid>
+        <Grid item xs={10} md={6} container justify="space-between" spacing={2}>
+          <Grid item xs={5} md={4}>
             <Card
               style={{
                 textAlign: "-webkit-center",
@@ -177,53 +186,7 @@ const About = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={3}>
-            <Card
-              style={{
-                textAlign: "-webkit-center",
-                color: "#e2dff0",
-                backgroundColor: "#802634",
-                border: "1px solid white",
-                paddingTop: "15px",
-              }}
-            >
-              <Avatar
-                style={{ width: "150px", height: "150px" }}
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Lloyd Wilson
-                </Typography>
-                <Typography variant="body2" component="p">
-                  CEO, FOUNDER
-                </Typography>
-                <br />
-                <Link
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  style={{ color: "white", paddingRight: "5px" }}
-                >
-                  <FacebookIcon />
-                </Link>
-                <Link
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  style={{ color: "white", paddingRight: "5px" }}
-                >
-                  <TwitterIcon />
-                </Link>
-                <Link
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  style={{ color: "white", paddingRight: "5px" }}
-                >
-                  <InstagramIcon />
-                </Link>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={5} md={4}>
             <Card
               style={{
                 textAlign: "-webkit-center",
@@ -270,8 +233,9 @@ const About = () => {
             </Card>
           </Grid>
         </Grid>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={1}></Grid>
       </Grid>
+      {/* Staff Content */}
     </Grid>
   );
 };

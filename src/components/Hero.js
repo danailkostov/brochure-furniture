@@ -1,14 +1,12 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import HeroCard from "../components/HeroCard";
 import { makeStyles } from "@material-ui/styles";
+import banner from '../images/banner-img.png';
 
 const useStyles = makeStyles({
   contStyles: {
-    // background:
-    //   "url(https://images.unsplash.com/photo-1573554767873-b553cdf97230?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80) no-repeat center center",
-    backgroundColor: "#802634",
-    height: "500px",
+    background: `url(${banner}) no-repeat center center`,
+    height: "80vh",
     backgroundSize: "cover",
   },
 });
@@ -16,13 +14,21 @@ const useStyles = makeStyles({
 const Hero = () => {
   const classes = useStyles();
   return (
-      <Grid container className={classes.contStyles}>
-        <Grid item xs={1} lg={4}></Grid>
-        <Grid item xs={10} lg={4}>
-          <HeroCard />
-        </Grid>
-        <Grid item xs={1} lg={4}></Grid>
+    <Grid container className={classes.contStyles}>
+      <Grid item xs={1} lg={4}></Grid>
+      <Grid item xs={10} lg={4} style={{color: 'white', alignSelf: 'center'}}>
+        <Typography variant="h3" align='center' gutterBottom>
+          Success starts with hardworking consultants
+        </Typography>
+        <Typography align='center' gutterBottom>
+          Morbi leo tortor, fermentum sed orci vitae, tempor auctor turpis.
+          Fusce bibendum accumsan fringilla. Nulla aliquam luctus sem, at
+          posuere nibh lobortis et. Ut ac mollis risus, eu congue libero. Nulla
+          vestibulum ultricies tortor at ultrices.
+        </Typography>
       </Grid>
+      <Grid item xs={1} lg={4}></Grid>
+    </Grid>
   );
 };
 
