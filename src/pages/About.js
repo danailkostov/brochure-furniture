@@ -14,10 +14,7 @@ import {
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import React from "react";
 
-// backgroundColor: "#e2dff0",
-//     color: "#802634",
 const About = () => {
   return (
     <Grid container direction="column" spacing={2}>
@@ -57,7 +54,12 @@ const About = () => {
           container
           style={{ backgroundColor: "#802634", margin: "100px 0px" }}
         >
-          <Grid item xs={12} md={7} style={{ alignSelf: "center", padding: "10px" }}>
+          <Grid
+            item
+            xs={12}
+            md={7}
+            style={{ alignSelf: "center", padding: "10px" }}
+          >
             <Card
               style={{
                 backgroundColor: "#802634",

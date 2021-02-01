@@ -3,10 +3,23 @@ import React from "react";
 import installService from "../images/install.jpg";
 import deliveryService from "../images/delivery.jpg";
 import loadingService from "../images/loading.png";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.primary.main,
+  },
+}));
 
 const Services = () => {
+  const classes = useStyles();
   return (
-    <Grid container direction="column" style={{ padding: "70px 0" }}>
+    <Grid
+      container
+      direction="column"
+      style={{ padding: "70px 0" }}
+      className={classes.root}
+    >
       <Grid item container>
         <Grid item xs={2}></Grid>
         <Grid

@@ -7,7 +7,7 @@ import BurgerMenu from "./BurgerMenu";
 
 const useStyles = makeStyles({
   root: {
-    boxShadow: 'none',
+    boxShadow: "none",
   },
   gridItem: {
     marginLeft: "25px",
@@ -19,8 +19,9 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
+
   return (
-    <AppBar  className={classes.root} color='transparent' position='absolute'>
+    <AppBar className={classes.root} color="transparent" position="absolute">
       <Grid container>
         <Grid item xs={4} lg={1} xl={2} container alignItems="center">
           <Hidden only={["lg", "xl"]}>
@@ -42,24 +43,28 @@ const Navbar = () => {
                       to="/"
                       component={Link}
                       className={classes.tab}
+                    
                     />
                     <Tab
                       label="За Нас"
                       to="/about"
                       component={Link}
                       className={classes.tab}
+                    
                     />
                     <Tab
                       label="Услуги"
                       to="/services"
                       component={Link}
                       className={classes.tab}
+                    
                     />
                     <Tab
                       label="Контакт"
                       to="/contact"
                       component={Link}
                       className={classes.tab}
+                   
                     />
                   </Tabs>
                 </Grid>
