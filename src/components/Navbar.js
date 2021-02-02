@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
-  const { colorStyle, checkColor} = useGlobalContext();
+  const { colorStyle } = useGlobalContext();
 
   return (
     <AppBar className={classes.root} color="transparent" position="absolute">
@@ -45,28 +45,24 @@ const Navbar = () => {
                       to="/"
                       component={Link}
                       className={classes.tab}
-                      onClick={() => checkColor("#e2dff0")}
                     />
                     <Tab
                       label="За Нас"
                       to="/about"
                       component={Link}
                       className={classes.tab}
-                      onClick={() => checkColor("#e2dff0")}
                     />
                     <Tab
                       label="Услуги"
                       to="/services"
                       component={Link}
                       className={classes.tab}
-                      onClick={() => checkColor("#802634")}
                     />
                     <Tab
                       label="Контакт"
                       to="/contact"
                       component={Link}
                       className={classes.tab}
-                      onClick={() => checkColor("#802634")}
                     />
                   </Tabs>
                 </Grid>

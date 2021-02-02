@@ -1,10 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
-import HomeIcon from "@material-ui/icons/Home";
-import GroupIcon from "@material-ui/icons/Group";
-import SettingsApplicationsIcon from "@material-ui/icons/SettingsApplications";
-import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import { Link } from "react-router-dom";
 import {
   Drawer,
@@ -14,6 +10,7 @@ import {
   ListItemText,
   ListItemIcon,
 } from "@material-ui/core";
+import { services } from './constants'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TemporaryDrawer() {
+  
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -55,32 +53,19 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className={classes.root}>
-        <Link to="/" className={classes.linksDecoration}>
-          <ListItem button key="1">
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Начало" />
-          </ListItem>
-        </Link>
-        <Link to="/about" className={classes.linksDecoration}>
-          <ListItem button key="2">
-          <ListItemIcon><GroupIcon /></ListItemIcon>
-            <ListItemText primary="За Нас" />
-          </ListItem>
-        </Link>
-        <Link to="/services" className={classes.linksDecoration}>
-          <ListItem button key="3">
-            <ListItemIcon><SettingsApplicationsIcon /></ListItemIcon>
-            <ListItemText primary="Услуги" />
-          </ListItem>
-        </Link>
-        <Link to="/contact" className={classes.linksDecoration}>
-          <ListItem button key="4">
-            <ListItemIcon><ContactSupportIcon /></ListItemIcon>
-            <ListItemText primary="Контакт" />
-          </ListItem>
-        </Link>
+      {services.map((service) => {
+        const {path, key, icon, label} = service;
+        return (
+          <Link to={path} className={classes.linksDecoration}>
+            <ListItem button key={key}>
+              <ListItemIcon>
+                  {icon}
+              </ListItemIcon>
+              <ListItemText primary={label}/>
+            </ListItem>
+          </Link>
+        )
+      })}
       </List>
     </div>
   );
