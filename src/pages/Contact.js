@@ -21,6 +21,20 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: theme.palette.secondary.main,
   },
+  formStyle: {
+    padding: "20px",
+    width: "680px",
+    margin: "0px auto",
+  },
+  textFieldStyle: {
+    backgroundColor: "white",
+  },
+  cardsContainer: {
+    padding: "7rem 0px",
+  },
+  cardPadding: {
+    paddingLeft: "70px",
+  },
 }));
 
 const Contact = () => {
@@ -29,13 +43,7 @@ const Contact = () => {
     <Box className={classes.root}>
       <Grid container direction="column">
         <Grid item container>
-          <form
-            style={{
-              padding: "20px",
-              width: "680px",
-              margin: "0px auto",
-            }}
-          >
+          <form className={classes.formStyle}>
             <Typography align="center" gutterBottom paragraph>
               SEND US A MESSAGE
             </Typography>
@@ -50,6 +58,7 @@ const Contact = () => {
                   required
                   margin="normal"
                   color="secondary"
+                  className={classes.textFieldStyle}
                 />
               </Grid>
               <Grid item xs={12} sm={4}>
@@ -61,6 +70,7 @@ const Contact = () => {
                   required
                   margin="normal"
                   color="secondary"
+                  className={classes.textFieldStyle}
                 />
               </Grid>
               <Grid item xs={12} sm={4}>
@@ -72,6 +82,7 @@ const Contact = () => {
                   required
                   margin="normal"
                   color="secondary"
+                  className={classes.textFieldStyle}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -85,6 +96,7 @@ const Contact = () => {
                   fullWidth
                   rows={10}
                   color="secondary"
+                  className={classes.textFieldStyle}
                 />
               </Grid>
               <Grid item xs={4} sm={2} justify="center">
@@ -101,7 +113,7 @@ const Contact = () => {
           container
           spacing={2}
           justify="center"
-          style={{ padding: "7rem 0px" }}
+          className={classes.cardsContainer}
         >
           <Grid item xs={12} sm={4} md={3} lg={2}>
             <CardHeader
@@ -131,7 +143,7 @@ const Contact = () => {
                 </Typography>
               }
             />
-            <Typography style={{ paddingLeft: "70px" }}>
+            <Typography className={classes.cardPadding}>
               (+1) 96 716 6879
             </Typography>
           </Grid>

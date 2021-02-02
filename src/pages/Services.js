@@ -8,25 +8,48 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.primary.main,
+    padding: "70px 0",
+  },
+  imgItem: {
+    [theme.breakpoints.down("sm")]: {
+      order: -1,
+    },
+  },
+  header: {
+    borderBottom: "1px solid #802634",
+    color: theme.palette.secondary.main,
+  },
+  contentContainer: {
+    paddingTop: "100px",
+  },
+  serviceImages: {
+    width: "100%",
+    height: "100%",
+    borderRadius: "15px",
+    border: "1px solid #802634",
+  },
+  middleLine: {
+    alignSelf: "center",
+    borderTop: "2px solid #802634",
+  },
+  textServiceContainer: {
+    borderRadius: "15px",
+    border: "1px solid #802634",
+    padding: "15px",
+  },
+  textServiceItem: {
+    alignSelf: "center",
+    color: theme.palette.secondary.main,
   },
 }));
 
 const Services = () => {
   const classes = useStyles();
   return (
-    <Grid
-      container
-      direction="column"
-      style={{ padding: "70px 0" }}
-      className={classes.root}
-    >
+    <Grid container direction="column" className={classes.root}>
       <Grid item container>
         <Grid item xs={2}></Grid>
-        <Grid
-          item
-          xs={8}
-          style={{ borderBottom: "1px solid #802634", color: "#802634" }}
-        >
+        <Grid item xs={8} className={classes.header}>
           <Typography variant="h4" align="center" gutterBottom>
             Какви Са Нашите Услуги
           </Typography>
@@ -35,26 +58,17 @@ const Services = () => {
       </Grid>
       {/* Content start*/}
       {/* First Couple */}
-      <Grid item container style={{ paddingTop: "100px" }}>
+      <Grid item container className={classes.contentContainer}>
         <Grid item xs={2}></Grid>
         <Grid item xs={8} md={3}>
           <img
             src={installService}
             alt="install"
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "15px",
-              border: "1px solid #802634",
-            }}
+            className={classes.serviceImages}
           />
         </Grid>
         <Hidden only={["xs", "sm"]}>
-          <Grid
-            item
-            md={2}
-            style={{ alignSelf: "center", borderTop: "2px solid #802634" }}
-          ></Grid>
+          <Grid item md={2} className={classes.middleLine}></Grid>
         </Hidden>
         <Hidden only={["md", "lg", "xl"]}>
           <Grid item xs={2}></Grid>
@@ -64,14 +78,10 @@ const Services = () => {
           item
           xs={8}
           md={3}
-          style={{
-            borderRadius: "15px",
-            border: "1px solid #802634",
-            padding: "15px",
-          }}
+          className={classes.textServiceContainer}
           container
         >
-          <Grid item style={{ alignSelf: "center", color: "#802634" }}>
+          <Grid item className={classes.textServiceItem}>
             <Typography align="center" variant="h4">
               Монтаж
             </Typography>
@@ -89,20 +99,16 @@ const Services = () => {
         {/* First Couple */}
       </Grid>
       {/* Second Couple */}
-      <Grid item container style={{ paddingTop: "100px" }}>
+      <Grid item container className={classes.contentContainer}>
         <Grid item xs={2}></Grid>
         <Grid
           item
           xs={8}
           md={3}
-          style={{
-            borderRadius: "15px",
-            border: "1px solid #802634",
-            padding: "15px",
-          }}
+          className={classes.textServiceContainer}
           container
         >
-          <Grid item style={{ alignSelf: "center", color: "#802634" }}>
+          <Grid item className={classes.textServiceItem}>
             <Typography align="center" variant="h4">
               Доставка
             </Typography>
@@ -117,53 +123,35 @@ const Services = () => {
           </Grid>
         </Grid>
         <Hidden only={["xs", "sm"]}>
-          <Grid
-            item
-            xs={2}
-            style={{ alignSelf: "center", borderTop: "2px solid #802634" }}
-          ></Grid>
+          <Grid item xs={2} className={classes.middleLine}></Grid>
         </Hidden>
         <Hidden only={["md", "lg", "xl"]}>
-          <Grid item xs={2}></Grid>
+          <Grid item xs={2} className={classes.imgItem}></Grid>
           <Grid item xs={2}></Grid>
         </Hidden>
 
-        <Grid item xs={8} md={3}>
+        <Grid item xs={8} md={3} className={classes.imgItem}>
           <img
             src={deliveryService}
             alt="install"
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "15px",
-              border: "1px solid #802634",
-            }}
+            className={classes.serviceImages}
           />
         </Grid>
-        <Grid item xs={2}></Grid>
+        <Grid item xs={2} className={classes.imgItem}></Grid>
         {/* Second Couple */}
       </Grid>
       {/* Third Couple */}
-      <Grid item container style={{ paddingTop: "100px" }}>
+      <Grid item container className={classes.contentContainer}>
         <Grid item xs={2}></Grid>
         <Grid item xs={8} md={3}>
           <img
             src={loadingService}
             alt="install"
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: "15px",
-              border: "1px solid #802634",
-            }}
+            className={classes.serviceImages}
           />
         </Grid>
         <Hidden only={["xs", "sm"]}>
-          <Grid
-            item
-            xs={2}
-            style={{ alignSelf: "center", borderTop: "2px solid #802634" }}
-          ></Grid>
+          <Grid item xs={2} className={classes.middleLine}></Grid>
         </Hidden>
         <Hidden only={["md", "lg", "xl"]}>
           <Grid item xs={2}></Grid>
@@ -173,14 +161,10 @@ const Services = () => {
           item
           xs={8}
           md={3}
-          style={{
-            borderRadius: "15px",
-            border: "1px solid #802634",
-            padding: "15px",
-          }}
+          className={classes.textServiceContainer}
           container
         >
-          <Grid item style={{ alignSelf: "center", color: "#802634" }}>
+          <Grid item className={classes.textServiceItem}>
             <Typography align="center" variant="h4">
               Качване
             </Typography>

@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import BurgerMenu from "./BurgerMenu";
+import { useGlobalContext } from "./context";
 
 const useStyles = makeStyles({
   root: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
+  const { colorStyle, checkColor} = useGlobalContext();
 
   return (
     <AppBar className={classes.root} color="transparent" position="absolute">
@@ -29,7 +31,7 @@ const Navbar = () => {
           </Hidden>
         </Grid>
         <Grid item xs={4} lg={10} xl={8}>
-          <Toolbar>
+          <Toolbar style={colorStyle}>
             <Grid container>
               <Grid item xs={3}>
                 <BrandingWatermarkIcon />
@@ -43,28 +45,28 @@ const Navbar = () => {
                       to="/"
                       component={Link}
                       className={classes.tab}
-                    
+                      onClick={() => checkColor("#e2dff0")}
                     />
                     <Tab
                       label="За Нас"
                       to="/about"
                       component={Link}
                       className={classes.tab}
-                    
+                      onClick={() => checkColor("#e2dff0")}
                     />
                     <Tab
                       label="Услуги"
                       to="/services"
                       component={Link}
                       className={classes.tab}
-                    
+                      onClick={() => checkColor("#802634")}
                     />
                     <Tab
                       label="Контакт"
                       to="/contact"
                       component={Link}
                       className={classes.tab}
-                   
+                      onClick={() => checkColor("#802634")}
                     />
                   </Tabs>
                 </Grid>
