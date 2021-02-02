@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import BurgerMenu from "./BurgerMenu";
 import { useGlobalContext } from "./context";
+import { services } from "../components/constants";
 
 const useStyles = makeStyles({
   root: {
@@ -40,30 +41,17 @@ const Navbar = () => {
               <Hidden only={["xs", "sm", "md"]}>
                 <Grid item xs={4}>
                   <Tabs>
-                    <Tab
-                      label="Начало"
-                      to="/"
-                      component={Link}
-                      className={classes.tab}
-                    />
-                    <Tab
-                      label="За Нас"
-                      to="/about"
-                      component={Link}
-                      className={classes.tab}
-                    />
-                    <Tab
-                      label="Услуги"
-                      to="/services"
-                      component={Link}
-                      className={classes.tab}
-                    />
-                    <Tab
-                      label="Контакт"
-                      to="/contact"
-                      component={Link}
-                      className={classes.tab}
-                    />
+                    {services.map((service) => {
+                      const { path, label } = service;
+                      return (
+                        <Tab
+                          label={label}
+                          to={path}
+                          component={Link}
+                          className={classes.tab}
+                        />
+                      );
+                    })}
                   </Tabs>
                 </Grid>
               </Hidden>

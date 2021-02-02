@@ -86,7 +86,7 @@ const About = () => {
   const classes = useStyles();
   const { checkColor } = useGlobalContext();
   useEffect(() => {
-    checkColor("e2dff0");
+    checkColor("#e2dff0");
   }, [checkColor]);
   return (
     <Grid container direction="column">
