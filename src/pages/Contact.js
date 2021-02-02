@@ -32,8 +32,10 @@ const useStyles = makeStyles((theme) => ({
   cardsContainer: {
     padding: "7rem 0px",
   },
-  cardPadding: {
-    paddingLeft: "70px",
+  margins: {
+    [theme.breakpoints.up("xl")]: {
+      marginLeft: "50px",
+    },
   },
 }));
 
@@ -115,56 +117,68 @@ const Contact = () => {
           justify="center"
           className={classes.cardsContainer}
         >
-          <Grid item xs={12} sm={4} md={3} lg={2}>
-            <CardHeader
-              avatar={
-                <Avatar aria-label="recipe" className={classes.avatar}>
-                  {<EmailIcon />}
-                </Avatar>
-              }
-              title={
-                <Typography variant="h5" gutterBottom>
-                  MESSAGE US
-                </Typography>
-              }
-            />
-            <Typography align="center">testingmail@gmail.com</Typography>
+          <Grid item xs={12} md={4} lg={3} xl={2} container>
+            <Grid item xs={3}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    {<EmailIcon />}
+                  </Avatar>
+                }
+              />
+            </Grid>
+            <Grid item xs={5} md={7}>
+              <Typography variant="h5" gutterBottom>
+                MESSAGE US
+              </Typography>
+              <Typography>testingmail@gmail.com</Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={4} md={3} lg={2}>
-            <CardHeader
-              avatar={
-                <Avatar aria-label="recipe" className={classes.avatar}>
-                  {<CallIcon />}
-                </Avatar>
-              }
-              title={
-                <Typography variant="h5" gutterBottom>
-                  CALL US
-                </Typography>
-              }
-            />
-            <Typography className={classes.cardPadding}>
-              (+1) 96 716 6879
-            </Typography>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            lg={3}
+            xl={2}
+            container
+            className={classes.margins}
+          >
+            <Grid item xs={3}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    {<CallIcon />}
+                  </Avatar>
+                }
+              />
+            </Grid>
+            <Grid item xs={5}>
+              <Typography variant="h5" gutterBottom>
+                CALL US
+              </Typography>
+              <Typography>(+1) 96 716 6879</Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={4} md={3} lg={2}>
-            <CardHeader
-              avatar={
-                <Avatar aria-label="recipe" className={classes.avatar}>
-                  {<ScheduleIcon />}
-                </Avatar>
-              }
-              title={
-                <Typography variant="h5" gutterBottom>
-                  OPENING HOURS
-                </Typography>
-              }
-            />
-            <Typography align="center">
-              09:30 AM – 11:00 PM
-              <br />
-              Every Day
-            </Typography>
+          <Grid item xs={12} md={4} lg={3} xl={2} container>
+            <Grid item xs={3}>
+              <CardHeader
+                avatar={
+                  <Avatar aria-label="recipe" className={classes.avatar}>
+                    {<ScheduleIcon />}
+                  </Avatar>
+                }
+              />
+            </Grid>
+            <Grid item xs={6} md={8}>
+              <Typography variant="h5" gutterBottom>
+                OPENING HOURS
+              </Typography>
+              <Typography>
+                09:30 AM – 11:00 PM
+                <br />
+                Every Day
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

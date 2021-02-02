@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "15px",
     border: "1px solid #802634",
     padding: "15px",
+    margin: "20px 0",
   },
   textServiceItem: {
     alignSelf: "center",
