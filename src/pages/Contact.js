@@ -10,9 +10,8 @@ import {
 import EmailIcon from "@material-ui/icons/Email";
 import CallIcon from "@material-ui/icons/Call";
 import ScheduleIcon from "@material-ui/icons/Schedule";
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { useGlobalContext } from "../components/context";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,10 +41,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = () => {
   const classes = useStyles();
-  const { checkColor } = useGlobalContext();
-  useEffect(() => {
-    checkColor("#802634");
-  }, [checkColor]);
   return (
     <Box className={classes.root}>
       <Grid container direction="column">

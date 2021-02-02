@@ -1,12 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [colorStyle, setColorStyle] = useState({ color: "#e2dff0" });
+  const initialState = "#e2dff0";
+  const [colorStyle, setColorStyle] = useState(
+    localStorage.getItem("page") ? localStorage.getItem("page") : initialState
+  );
   const checkColor = (colorType) => {
-    setColorStyle({ color: colorType });
+    setColorStyle(colorType);
   };
+
+  useEffect(() => {
+    localStorage.setItem("page", colorStyle);
+  }, [colorStyle]);
+
   return (
     <AppContext.Provider value={{ colorStyle, checkColor }}>
       {children}

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 const Navbar = () => {
   const classes = useStyles();
-  const { colorStyle } = useGlobalContext();
+  const { colorStyle, checkColor } = useGlobalContext();
 
   return (
     <AppBar className={classes.root} color="transparent" position="absolute">
@@ -32,7 +32,7 @@ const Navbar = () => {
           </Hidden>
         </Grid>
         <Grid item xs={4} lg={10} xl={8}>
-          <Toolbar style={colorStyle}>
+          <Toolbar style={{color: colorStyle}}>
             <Grid container>
               <Grid item xs={3}>
                 <BrandingWatermarkIcon />
@@ -42,13 +42,14 @@ const Navbar = () => {
                 <Grid item xs={4}>
                   <Tabs>
                     {services.map((service) => {
-                      const { path, label } = service;
+                      const { path, label, color } = service;
                       return (
                         <Tab
                           label={label}
                           to={path}
                           component={Link}
                           className={classes.tab}
+                          onClick={() => checkColor(color)}
                         />
                       );
                     })}

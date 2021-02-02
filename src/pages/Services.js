@@ -1,10 +1,9 @@
 import { Grid, Hidden, Typography } from "@material-ui/core";
-import React, { useEffect } from "react";
+import React from "react";
 import installService from "../images/install.jpg";
 import deliveryService from "../images/delivery.jpg";
 import loadingService from "../images/loading.png";
 import { makeStyles } from "@material-ui/core/styles";
-import { useGlobalContext } from "../components/context";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,10 +48,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Services = () => {
   const classes = useStyles();
-  const { checkColor } = useGlobalContext();
-  useEffect(() => {
-    checkColor("#802634");
-  }, [checkColor]);
   return (
     <Grid container direction="column" className={classes.root}>
       <Grid item container>

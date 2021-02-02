@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Grid,
   Typography,
@@ -16,7 +16,6 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { makeStyles } from "@material-ui/styles";
-import { useGlobalContext } from "../components/context";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -84,10 +83,6 @@ const useStyles = makeStyles((theme) => ({
 
 const About = () => {
   const classes = useStyles();
-  const { checkColor } = useGlobalContext();
-  useEffect(() => {
-    checkColor("#e2dff0");
-  }, [checkColor]);
   return (
     <Grid container direction="column">
       {/* About us Header */}
