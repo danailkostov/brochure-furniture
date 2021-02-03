@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: theme.palette.secondary.main,
   },
+  gridItem: {
+    color: 'white'
+  }
 }));
 
 export default function TemporaryDrawer() {

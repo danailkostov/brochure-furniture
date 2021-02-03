@@ -177,7 +177,7 @@ const Contact = () => {
                 }
               />
             </Grid>
-            <Grid item xs={6} md={8}>
+            <Grid item xs={7} md={8}>
               <Typography variant="h5" gutterBottom>
                 OPENING HOURS
               </Typography>

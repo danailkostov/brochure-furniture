@@ -26,13 +26,9 @@ const Navbar = () => {
   return (
     <AppBar className={classes.root} color="transparent" position="absolute">
       <Grid container>
-        <Grid item xs={4} lg={1} xl={2} container alignItems="center">
-          <Hidden only={["lg", "xl"]}>
-            <BurgerMenu />
-          </Hidden>
-        </Grid>
+        <Grid item xs={4} lg={1} xl={2}></Grid>
         <Grid item xs={4} lg={10} xl={8}>
-          <Toolbar style={{color: colorStyle}}>
+          <Toolbar style={{ color: colorStyle }}>
             <Grid container>
               <Grid item xs={3}>
                 <BrandingWatermarkIcon />
@@ -59,7 +55,11 @@ const Navbar = () => {
             </Grid>
           </Toolbar>
         </Grid>
-        <Grid item xs={4} lg={1} xl={2}></Grid>
+        <Grid item xs={4} lg={1} xl={2} container alignItems='center' justify='flex-end'>
+          <Hidden only={["lg", "xl"]}>
+            <BurgerMenu />
+          </Hidden>
+        </Grid>
       </Grid>
     </AppBar>
   );

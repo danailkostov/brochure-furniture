@@ -16,6 +16,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { makeStyles } from "@material-ui/styles";
+import Navbar from "../components/Navbar";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContent: {
     borderBottom: "1px solid #e2dff0",
-    width: "12vw",
+    width: "70px",
   },
   cardImageContainer: {
     alignSelf: "center",
@@ -59,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
   staffContainer: {
     backgroundColor: theme.palette.secondary.main,
     paddingBottom: "130px",
+    paddingTop: "40px",
   },
   ourStaff: {
     color: theme.palette.primary.main,
@@ -70,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
     border: "1px solid white",
     paddingTop: "15px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "35px 65px",
+    },
   },
   personAvatar: {
     width: "150px",
@@ -84,171 +89,176 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   return (
-    <Grid container direction="column">
-      {/* About us Header */}
-      <Grid item container className={classes.header}>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={6} className={classes.headerItems}>
-          <Typography align="center" variant="h3">
-            ABOUT US
-          </Typography>
-        </Grid>
-        <Grid item xs={3}></Grid>
-      </Grid>
-      {/* About us Header */}
-
-      {/* About us Content */}
-      <Grid item container className={classes.contentContainer}>
-        <Grid item xs={1} lg={3}></Grid>
-        <Grid item xs={10} lg={6} container className={classes.contentItems}>
-          <Grid item xs={12} md={7} className={classes.contentCardWrapper}>
-            <Card className={classes.card}>
-              <CardContent>
-                <Typography className={classes.cardContent}>
-                  About Us
-                </Typography>
-                <br />
-                <Typography variant="h5">
-                  We Believe that Interior beauty Lasts Long
-                </Typography>
-                <br />
-                <Typography variant="body2">
-                  inappropriate behavior is often laughed off as “boys will be
-                  boys,” women face higher conduct standards especially in the
-                  workplace. That’s why it’s crucial that as women.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="medium" color="primary" aria-label="learn">
-                  Learn More
-                </Button>
-              </CardActions>
-            </Card>
+    <>
+    <Navbar />
+      <Grid container direction="column">
+        {/* About us Header */}
+        <Grid
+          item
+          container
+          className={classes.header}
+          alignContent="center"
+          justify="center"
+        >
+          <Grid item xs={12} className={classes.headerItems}>
+            <Typography align="center" variant="h3">
+              ABOUT US
+            </Typography>
           </Grid>
-          <Hidden only={["xs", "sm"]}>
-            <Grid item xs={5} className={classes.cardImageContainer}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.cardImage}
-                    image="https://images.unsplash.com/photo-1611689225620-3e70248bc0f0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                  />
-                </CardActionArea>
+        </Grid>
+        {/* About us Header */}
+
+        {/* About us Content */}
+        <Grid item container className={classes.contentContainer}>
+          <Grid item xs={1} lg={3}></Grid>
+          <Grid item xs={10} lg={6} container className={classes.contentItems}>
+            <Grid item xs={12} md={7} className={classes.contentCardWrapper}>
+              <Card className={classes.card}>
+                <CardContent>
+                  <Typography className={classes.cardContent}>
+                    About Us
+                  </Typography>
+                  <br />
+                  <Typography variant="h5">
+                    We Believe that Interior beauty Lasts Long
+                  </Typography>
+                  <br />
+                  <Typography variant="body2">
+                    inappropriate behavior is often laughed off as “boys will be
+                    boys,” women face higher conduct standards especially in the
+                    workplace. That’s why it’s crucial that as women.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="medium" color="primary" aria-label="learn">
+                    Learn More
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
-          </Hidden>
-        </Grid>
-        <Grid item xs={1}></Grid>
-      </Grid>
-      {/* About us Content */}
-      {/* Staff Content */}
-      <Grid item container className={classes.staffContainer}>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={6} className={classes.ourStaff}>
-          <Typography align="center">ABOUT US</Typography>
-          <br />
-          <Typography align="center" variant="h3">
-            OUR STAFF
-          </Typography>
-          <br />
-          <Typography align="center" variant="body1">
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia
-          </Typography>
-          <br />
-        </Grid>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={1} md={3}></Grid>
-        <Grid item xs={10} md={6} container justify="space-between" spacing={2}>
-          <Grid item xs={12} sm={5} md={6} lg={5} xl={4}>
-            <Card className={classes.personCard}>
-              <Avatar
-                className={classes.personAvatar}
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="person"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Lloyd Wilson
-                </Typography>
-                <Typography variant="body2" component="p">
-                  CEO, FOUNDER
-                </Typography>
-                <br />
-                <Link
-                  aria-label="youtube"
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  className={classes.personIcons}
-                >
-                  <FacebookIcon />
-                </Link>
-                <Link
-                  aria-label="youtube"
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  className={classes.personIcons}
-                >
-                  <TwitterIcon />
-                </Link>
-                <Link
-                  aria-label="youtube"
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  className={classes.personIcons}
-                >
-                  <InstagramIcon />
-                </Link>
-              </CardContent>
-            </Card>
+            <Hidden only={["xs", "sm"]}>
+              <Grid item xs={5} className={classes.cardImageContainer}>
+                <Card>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.cardImage}
+                      image="https://images.unsplash.com/photo-1611689225620-3e70248bc0f0?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                    />
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            </Hidden>
           </Grid>
-          <Grid item xs={12} sm={5} md={6} lg={5} xl={4}>
-            <Card className={classes.personCard}>
-              <Avatar
-                className={classes.personAvatar}
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt="person"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Lloyd Wilson
-                </Typography>
-                <Typography variant="body2" component="p">
-                  CEO, FOUNDER
-                </Typography>
-                <br />
-                <Link
-                  aria-label="youtube"
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  className={classes.personIcons}
-                >
-                  <FacebookIcon />
-                </Link>
-                <Link
-                  aria-label="youtube"
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  className={classes.personIcons}
-                >
-                  <TwitterIcon />
-                </Link>
-                <Link
-                  aria-label="youtube"
-                  underline="none"
-                  href="https://www.youtube.com/"
-                  className={classes.personIcons}
-                >
-                  <InstagramIcon />
-                </Link>
-              </CardContent>
-            </Card>
-          </Grid>
+          <Grid item xs={1}></Grid>
         </Grid>
-        <Grid item xs={1}></Grid>
+        {/* About us Content */}
+        {/* Staff Content */}
+        <Grid item container className={classes.staffContainer}>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={8} className={classes.ourStaff}>
+            <Typography align="center" variant="h3">
+              OUR STAFF
+            </Typography>
+            <br />
+            <Typography align="center" variant="body1" gutterBottom>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia
+            </Typography>
+            <br />
+          </Grid>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={1} md={3}></Grid>
+          <Grid item xs={10} md={6} container justify="space-between">
+            <Grid item xs={12} sm={5} md={6} lg={5} xl={4}>
+              <Card className={classes.personCard}>
+                <Avatar
+                  className={classes.personAvatar}
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="person"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Lloyd Wilson
+                  </Typography>
+                  <Typography variant="body2" component="p">
+                    CEO, FOUNDER
+                  </Typography>
+                  <br />
+                  <Link
+                    aria-label="youtube"
+                    underline="none"
+                    href="https://www.youtube.com/"
+                    className={classes.personIcons}
+                  >
+                    <FacebookIcon />
+                  </Link>
+                  <Link
+                    aria-label="youtube"
+                    underline="none"
+                    href="https://www.youtube.com/"
+                    className={classes.personIcons}
+                  >
+                    <TwitterIcon />
+                  </Link>
+                  <Link
+                    aria-label="youtube"
+                    underline="none"
+                    href="https://www.youtube.com/"
+                    className={classes.personIcons}
+                  >
+                    <InstagramIcon />
+                  </Link>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={5} md={6} lg={5} xl={4}>
+              <Card className={classes.personCard}>
+                <Avatar
+                  className={classes.personAvatar}
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="person"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Lloyd Wilson
+                  </Typography>
+                  <Typography variant="body2" component="p">
+                    CEO, FOUNDER
+                  </Typography>
+                  <br />
+                  <Link
+                    aria-label="youtube"
+                    underline="none"
+                    href="https://www.youtube.com/"
+                    className={classes.personIcons}
+                  >
+                    <FacebookIcon />
+                  </Link>
+                  <Link
+                    aria-label="youtube"
+                    underline="none"
+                    href="https://www.youtube.com/"
+                    className={classes.personIcons}
+                  >
+                    <TwitterIcon />
+                  </Link>
+                  <Link
+                    aria-label="youtube"
+                    underline="none"
+                    href="https://www.youtube.com/"
+                    className={classes.personIcons}
+                  >
+                    <InstagramIcon />
+                  </Link>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+          <Grid item xs={1}></Grid>
+        </Grid>
+        {/* Staff Content */}
       </Grid>
-      {/* Staff Content */}
-    </Grid>
+    </>
   );
 };
 
