@@ -165,6 +165,7 @@ const About = () => {
               <Avatar
                 className={classes.personAvatar}
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt='person'
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
@@ -203,6 +204,7 @@ const About = () => {
               <Avatar
                 className={classes.personAvatar}
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt='person'
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">

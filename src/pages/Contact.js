@@ -53,8 +53,10 @@ const Contact = () => {
             <Grid item container spacing={2} justify="center">
               <Grid item xs={12} sm={4}>
                 <TextField
-                  variant="outlined"
+                  id="name"
+                  name="name"
                   label="Name"
+                  variant="outlined"
                   placeholder="Enter your name"
                   fullWidth
                   required
@@ -65,8 +67,10 @@ const Contact = () => {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <TextField
-                  variant="outlined"
+                  id="email"
+                  name="email"
                   label="Email"
+                  variant="outlined"
                   placeholder="Enter your email"
                   fullWidth
                   required
@@ -77,8 +81,10 @@ const Contact = () => {
               </Grid>
               <Grid item xs={12} sm={4}>
                 <TextField
-                  variant="outlined"
+                  id="phone"
+                  name="phone"
                   label="Phone"
+                  variant="outlined"
                   placeholder="Enter your phone number"
                   fullWidth
                   required
@@ -89,8 +95,10 @@ const Contact = () => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  variant="outlined"
+                  id="message"
+                  name="message"
                   label="Message"
+                  variant="outlined"
                   placeholder="Enter your message"
                   multiline
                   margin="normal"
