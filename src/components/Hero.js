@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
-import banner from "../images/banner-img.png";
+import banner from "../images/banner-img.webp";
 
 const useStyles = makeStyles((theme) => ({
   contStyles: {

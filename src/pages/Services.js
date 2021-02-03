@@ -2,7 +2,7 @@ import { Grid, Hidden, Typography } from "@material-ui/core";
 import React from "react";
 import installService from "../images/install.jpg";
 import deliveryService from "../images/delivery.jpg";
-import loadingService from "../images/loading.png";
+import loadingService from "../images/loading.webp";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
