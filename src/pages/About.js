@@ -119,7 +119,7 @@ const About = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="medium" color="primary">
+                <Button size="medium" color="primary" aria-label="learn">
                   Learn More
                 </Button>
               </CardActions>
@@ -165,7 +165,7 @@ const About = () => {
               <Avatar
                 className={classes.personAvatar}
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt='person'
+                alt="person"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
@@ -176,6 +176,7 @@ const About = () => {
                 </Typography>
                 <br />
                 <Link
+                  aria-label="youtube"
                   underline="none"
                   href="https://www.youtube.com/"
                   className={classes.personIcons}
@@ -183,6 +184,7 @@ const About = () => {
                   <FacebookIcon />
                 </Link>
                 <Link
+                  aria-label="youtube"
                   underline="none"
                   href="https://www.youtube.com/"
                   className={classes.personIcons}
@@ -190,6 +192,7 @@ const About = () => {
                   <TwitterIcon />
                 </Link>
                 <Link
+                  aria-label="youtube"
                   underline="none"
                   href="https://www.youtube.com/"
                   className={classes.personIcons}
@@ -204,7 +207,7 @@ const About = () => {
               <Avatar
                 className={classes.personAvatar}
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YXZhdGFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                alt='person'
+                alt="person"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
@@ -215,6 +218,7 @@ const About = () => {
                 </Typography>
                 <br />
                 <Link
+                  aria-label="youtube"
                   underline="none"
                   href="https://www.youtube.com/"
                   className={classes.personIcons}
@@ -222,6 +226,7 @@ const About = () => {
                   <FacebookIcon />
                 </Link>
                 <Link
+                  aria-label="youtube"
                   underline="none"
                   href="https://www.youtube.com/"
                   className={classes.personIcons}
@@ -229,6 +234,7 @@ const About = () => {
                   <TwitterIcon />
                 </Link>
                 <Link
+                  aria-label="youtube"
                   underline="none"
                   href="https://www.youtube.com/"
                   className={classes.personIcons}
