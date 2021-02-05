@@ -1,191 +1,73 @@
-import { Grid, Hidden, Typography } from "@material-ui/core";
 import React from "react";
-import installService from "../images/install.jpg";
-import deliveryService from "../images/delivery.jpg";
-import loadingService from "../images/loading.webp";
 import { makeStyles } from "@material-ui/core/styles";
+import { services } from "../components/constants";
+import {
+  Container,
+  Grid,
+  Typography,
+  CardActionArea,
+  CardContent,
+  Box,
+  Card,
+  Avatar,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
-    padding: "70px 0",
+    maxWidth: 300,
+    boxShadow: "none",
+    textAlign: "-webkit-center",
+    background: theme.palette.secondary.light,
+    paddingTop: "15px",
   },
-  imgItem: {
-    [theme.breakpoints.down("sm")]: {
-      order: -1,
-    },
+  avatar: {
+    height: "70px",
+    width: "70px",
+    border: "5px solid #322E18",
+    background: theme.palette.secondary.light,
   },
-  header: {
-    borderBottom: "1px solid #802634",
-    color: theme.palette.secondary.main,
+  container: {
+    padding: "100px 0px",
+    textAlign: "-webkit-center",
   },
-  contentContainer: {
-    paddingTop: "100px",
-  },
-  serviceImages: {
-    width: "100%",
-    height: "100%",
-    borderRadius: "15px",
-    border: "1px solid #802634",
-  },
-  middleLine: {
-    alignSelf: "center",
-    borderTop: "2px solid #802634",
-  },
-  textServiceContainer: {
-    borderRadius: "15px",
-    border: "1px solid #802634",
-    padding: "15px",
-    [theme.breakpoints.down("sm")]: {
-      margin: "20px 0",
-    },
-  },
-  textServiceItem: {
-    alignSelf: "center",
-    color: theme.palette.secondary.main,
+  box: {
+    background: theme.palette.secondary.light,
   },
 }));
-
 const Services = () => {
   const classes = useStyles();
-  return (
-    <Grid container direction="column" className={classes.root}>
-      <Grid item container>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={8} className={classes.header}>
-          <Typography variant="h4" align="center" gutterBottom>
-            Какви Са Нашите Услуги
-          </Typography>
-        </Grid>
-        <Grid item xs={2}></Grid>
-      </Grid>
-      {/* Content start*/}
-      {/* First Couple */}
-      <Grid item container className={classes.contentContainer}>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={8} md={3}>
-          <img
-            src={installService}
-            alt="install"
-            className={classes.serviceImages}
-          />
-        </Grid>
-        <Hidden only={["xs", "sm"]}>
-          <Grid item md={2} className={classes.middleLine}></Grid>
-        </Hidden>
-        <Hidden only={["md", "lg", "xl"]}>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={2}></Grid>
-        </Hidden>
-        <Grid
-          item
-          xs={8}
-          md={3}
-          className={classes.textServiceContainer}
-          container
-        >
-          <Grid item className={classes.textServiceItem}>
-            <Typography align="center" variant="h4">
-              Монтаж
-            </Typography>
-            <Typography align="center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              iure dicta a modi eum. Ea. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Optio iure dicta a modi eum. Ea. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Optio iure dicta a
-              modi eum. Ea. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={2}></Grid>
-        {/* First Couple */}
-      </Grid>
-      {/* Second Couple */}
-      <Grid item container className={classes.contentContainer}>
-        <Grid item xs={2}></Grid>
-        <Grid
-          item
-          xs={8}
-          md={3}
-          className={classes.textServiceContainer}
-          container
-        >
-          <Grid item className={classes.textServiceItem}>
-            <Typography align="center" variant="h4">
-              Доставка
-            </Typography>
-            <Typography align="center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              iure dicta a modi eum. Ea. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Optio iure dicta a modi eum. Ea. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Optio iure dicta a
-              modi eum. Ea. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Hidden only={["xs", "sm"]}>
-          <Grid item xs={2} className={classes.middleLine}></Grid>
-        </Hidden>
-        <Hidden only={["md", "lg", "xl"]}>
-          <Grid item xs={2} className={classes.imgItem}></Grid>
-          <Grid item xs={2}></Grid>
-        </Hidden>
 
-        <Grid item xs={8} md={3} className={classes.imgItem}>
-          <img
-            src={deliveryService}
-            alt="install"
-            className={classes.serviceImages}
-          />
+  return (
+    <Box className={classes.box}>
+      <Container>
+        <Grid container className={classes.container}>
+          {services.map((service) => {
+            const { icon, name, desc } = service;
+            return (
+              <Grid item xs={12} sm={4}>
+                <Card className={classes.root}>
+                  <CardActionArea>
+                    <Avatar className={classes.avatar}>{icon}</Avatar>
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {name}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {desc}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            );
+          })}
         </Grid>
-        <Grid item xs={2} className={classes.imgItem}></Grid>
-        {/* Second Couple */}
-      </Grid>
-      {/* Third Couple */}
-      <Grid item container className={classes.contentContainer}>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={8} md={3}>
-          <img
-            src={loadingService}
-            alt="install"
-            className={classes.serviceImages}
-          />
-        </Grid>
-        <Hidden only={["xs", "sm"]}>
-          <Grid item xs={2} className={classes.middleLine}></Grid>
-        </Hidden>
-        <Hidden only={["md", "lg", "xl"]}>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={2}></Grid>
-        </Hidden>
-        <Grid
-          item
-          xs={8}
-          md={3}
-          className={classes.textServiceContainer}
-          container
-        >
-          <Grid item className={classes.textServiceItem}>
-            <Typography align="center" variant="h4">
-              Качване
-            </Typography>
-            <Typography align="center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              iure dicta a modi eum. Ea. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Optio iure dicta a modi eum. Ea. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Optio iure dicta a
-              modi eum. Ea. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={2}></Grid>
-        {/* Third Couple */}
-      </Grid>
-      {/* Content end */}
-    </Grid>
+      </Container>
+    </Box>
   );
 };
 

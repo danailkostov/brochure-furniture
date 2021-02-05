@@ -12,10 +12,11 @@ import CallIcon from "@material-ui/icons/Call";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { inputs } from "../components/constants";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "#CFCCD6",
     padding: "5rem 0",
   },
   avatar: {
@@ -31,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardsContainer: {
     padding: "7rem 0px",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: "40px",
+    },
   },
   margins: {
     [theme.breakpoints.up("xl")]: {
@@ -51,48 +55,26 @@ const Contact = () => {
             </Typography>
 
             <Grid item container spacing={2} justify="center">
-              <Grid item xs={12} sm={4}>
-                <TextField
-                  id="name"
-                  name="name"
-                  label="Name"
-                  variant="outlined"
-                  placeholder="Enter your name"
-                  fullWidth
-                  required
-                  margin="normal"
-                  color="secondary"
-                  className={classes.textFieldStyle}
-                />
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <TextField
-                  id="email"
-                  name="email"
-                  label="Email"
-                  variant="outlined"
-                  placeholder="Enter your email"
-                  fullWidth
-                  required
-                  margin="normal"
-                  color="secondary"
-                  className={classes.textFieldStyle}
-                />
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <TextField
-                  id="phone"
-                  name="phone"
-                  label="Phone"
-                  variant="outlined"
-                  placeholder="Enter your phone number"
-                  fullWidth
-                  required
-                  margin="normal"
-                  color="secondary"
-                  className={classes.textFieldStyle}
-                />
-              </Grid>
+              {inputs.map((input) => {
+                const { id, name, label, placeholder } = input;
+                return (
+                  <Grid item xs={12} sm={4}>
+                    <TextField
+                      id={id}
+                      name={name}
+                      label={label}
+                      placeholder={placeholder}
+                      variant="outlined"
+                      fullWidth
+                      required
+                      margin="norma"
+                      color="secondary"
+                      className={classes.textFieldStyle}
+                    />
+                  </Grid>
+                );
+              })}
+
               <Grid item xs={12}>
                 <TextField
                   id="message"
@@ -109,9 +91,15 @@ const Contact = () => {
                   className={classes.textFieldStyle}
                 />
               </Grid>
-              <Grid item xs={4} sm={2} justify="center">
-                <Button type="submit" color="secondary" variant="contained">
-                  Sign In
+              <Grid item xs={12} sm={2} justify="center">
+                <Button
+                  type="submit"
+                  color="secondary"
+                  variant="contained"
+                  size="large"
+                  fullWidth
+                >
+                  ЗАЯВКА
                 </Button>
               </Grid>
             </Grid>
@@ -135,7 +123,7 @@ const Contact = () => {
                 }
               />
             </Grid>
-            <Grid item xs={5} md={7}>
+            <Grid item xs={7} md={7}>
               <Typography variant="h5" gutterBottom>
                 MESSAGE US
               </Typography>
@@ -177,7 +165,7 @@ const Contact = () => {
                 }
               />
             </Grid>
-            <Grid item xs={7} md={8}>
+            <Grid item xs={8} md={8}>
               <Typography variant="h5" gutterBottom>
                 OPENING HOURS
               </Typography>

@@ -1,37 +1,67 @@
-import HomeIcon from "@material-ui/icons/Home";
-import GroupIcon from "@material-ui/icons/Group";
-import SettingsApplicationsIcon from "@material-ui/icons/SettingsApplications";
-import ContactSupportIcon from "@material-ui/icons/ContactSupport";
+import galleryImg from "../images/gallery.jpg";
+import BuildIcon from "@material-ui/icons/Build";
+import FitnessCenterSharpIcon from "@material-ui/icons/FitnessCenterSharp";
+import DepartureBoardSharpIcon from "@material-ui/icons/DepartureBoardSharp";
 
 const services = [
   {
-    path: "/",
-    key: 1,
-    icon: <HomeIcon />,
-    label: "Начало",
-    color: "#e2dff0",
+    icon: <BuildIcon fontSize="large" color="secondary" />,
+    name: "Сглобяване",
+    desc:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Porro itaque quisquam optio beatae ea quasi nisi excepturinostrum quod labore.",
   },
   {
-    path: "/about",
-    key: 2,
-    icon: <GroupIcon />,
-    label: "За нас",
-    color: "#e2dff0",
+    icon: <FitnessCenterSharpIcon fontSize="large" color="secondary" />,
+    name: "Разнос",
+    desc:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Porro itaque quisquam optio beatae ea quasi nisi excepturinostrum quod labore.",
   },
   {
-    path: "/services",
-    key: 3,
-    icon: <SettingsApplicationsIcon />,
-    label: "Услуги",
-    color: "#802634",
-  },
-  {
-    path: "/contact",
-    key: 4,
-    icon: <ContactSupportIcon />,
-    label: "Контакт",
-    color: '#802634'
+    icon: <DepartureBoardSharpIcon fontSize="large" color="secondary" />,
+    name: "Транспорт",
+    desc:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Porro itaque quisquam optio beatae ea quasi nisi excepturinostrum quod labore.",
   },
 ];
 
-export { services };
+const gallery = [
+  {
+    id: 1,
+    img: { galleryImg },
+  },
+  {
+    id: 2,
+    img: { galleryImg },
+  },
+  {
+    id: 3,
+    img: { galleryImg },
+  },
+  {
+    id: 4,
+    img: { galleryImg },
+  },
+];
+
+const inputs = [
+  {
+    id: "name",
+    name: "name",
+    label: "Name",
+    placeholder: "Enter your name",
+  },
+  {
+    id: "email",
+    name: "email",
+    label: "Email",
+    placeholder: "Enter your email",
+  },
+  {
+    id: "phone",
+    name: "phone",
+    label: "Phone",
+    placeholder: "Enter your phone number",
+  },
+];
+
+export { services, gallery, inputs };

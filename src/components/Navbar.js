@@ -3,7 +3,6 @@ import { AppBar, Grid, Toolbar, Hidden, Tabs, Tab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
 import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
-import BurgerMenu from "./BurgerMenu";
 import { useGlobalContext } from "./context";
 import { services } from "../components/constants";
 
@@ -57,7 +56,6 @@ const Navbar = () => {
         </Grid>
         <Grid item xs={4} lg={1} xl={2} container alignItems='center' justify='flex-end'>
           <Hidden only={["lg", "xl"]}>
-            <BurgerMenu />
           </Hidden>
         </Grid>
       </Grid>
