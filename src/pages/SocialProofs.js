@@ -38,7 +38,7 @@ const Features = () => {
       <Container className={classes.container}>
         <Grid container justify="center">
           <Grid item xs={12}>
-            <Typography variant="h4" align="center" gutterBottom>
+            <Typography variant="h2" align="center" gutterBottom>
               Нашите Проекти
             </Typography>
           </Grid>
