@@ -3,6 +3,7 @@ import React from "react";
 import galleryImg from "../images/gallery.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import { gallery } from "../components/constants";
+import Testimonials from "../components/Testimonials";
 // #322E18
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -58,15 +59,8 @@ const Features = () => {
       </Container>
       <Container className={classes.testimonialCont}>
         <Grid container justify="center">
-          <Grid item xs={10} md={7}>
-            <Typography gutterBottom>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              quidem inventore eveniet? Eius aliquid quam dolore animi est
-              incidunt praesentium, nihil tempore cumque non corporis magnam
-              similique nulla illo quia earum natus id explicabo consequuntur
-              sit quisquam dolor harum! Perspiciatis!
-            </Typography>
-            <Typography>от Тодор Стоименов</Typography>
+          <Grid item xs={12} sm={8}>
+            <Testimonials />
           </Grid>
         </Grid>
       </Container>

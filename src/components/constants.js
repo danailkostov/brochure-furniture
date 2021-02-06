@@ -64,4 +64,25 @@ const inputs = [
   },
 ];
 
-export { services, gallery, inputs };
+const comments = [
+  {
+    name: "Danail Kostov",
+    comment:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit quidem inventore eveniet? Eius aliquid quam dolore animi estincidunt praesentium, nihil tempore cumque non corporis magnamsimilique nulla illo quia earum natus id explicabo consequuntursit quisquam dolor  Perspiciatis!",
+    profession: "customer",
+  },
+  {
+    name: "Danail Kostovv2",
+    comment:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit quidem inventore eveniet? Eius aliquid quam dolore animi estincidunt praesentium, nihil tempore cumque non corporis magnamsimilique nulla illo quia earum natus id explicabo consequuntursit quisquam dolor  Perspiciatis!",
+    profession: "customer",
+  },
+  {
+    name: "Danail Kostovv3",
+    comment:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit quidem inventore eveniet? Eius aliquid quam dolore animi estincidunt praesentium, nihil tempore cumque non corporis magnamsimilique nulla illo quia earum natus id explicabo consequuntursit quisquam dolor  Perspiciatis!",
+    profession: "customer",
+  },
+];
+
+export { services, gallery, inputs, comments };
