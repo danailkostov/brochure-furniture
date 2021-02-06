@@ -38,41 +38,27 @@ const useStyles = makeStyles((theme) => ({
 const Hero = () => {
   const classes = useStyles();
   return (
-    // <Grid container className={classes.contStyles}>
-    //   <Grid item xs={1} lg={4}></Grid>
-    //   <Grid item xs={10} lg={4} className={classes.heroText}>
-    //     <Typography variant="h3" align="center" gutterBottom>
-    //       Success starts with hardworking consultants
-    //     </Typography>
-    //     <Typography align="center" gutterBottom>
-    //       Morbi leo tortor, fermentum sed orci vitae, tempor auctor turpis.
-    //       Fusce bibendum accumsan fringilla. Nulla aliquam luctus sem, at
-    //       posuere nibh lobortis et. Ut ac mollis risus, eu congue libero. Nulla
-    //       vestibulum ultricies tortor at ultrices.
-    //     </Typography>
-    //   </Grid>
-    //   <Grid item xs={1} lg={4}></Grid>
-    // </Grid>
     <Box className={classes.contStyles}>
       <Container style={{ height: "100%" }}>
         <Grid
           container
-          justify="space-between"
+          // justify="space-between"
+          justify="center"
           alignItems="center"
           className={classes.gridContainer}
         >
           <Grid item xs={12} md={6}>
-            <Typography variant="h2" align="center">
+            <Typography variant="h2" align="center" >
               Dia Movers
             </Typography>
             <Typography variant="h2" align="center">
               Мебелни услуги
             </Typography>
-            <Typography variant="subtitle1" align="center">
+            <Typography variant="h6" align="center">
               Сглобяване, разнос и транспорт на мебели в цяла България
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} className={classes.form}>
+          {/* <Grid item xs={12} sm={6} md={4} className={classes.form}>
             <Typography
               variant="subtitl1"
               component="h4"
@@ -122,7 +108,7 @@ const Hero = () => {
                 ОБАДЕТЕ МИ СЕ
               </Button>
             </form>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Box>

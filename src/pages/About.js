@@ -38,7 +38,7 @@ const About = () => {
               Нашият екип
             </Typography>
             <Typography
-              variant="subtitle1"
+              variant="h6"
               align="center"
               gutterBottom
               paragraph

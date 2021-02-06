@@ -10,6 +10,9 @@ const theme = createMuiTheme({
       light: "#CFCCD6",
     },
   },
+  typography: {
+    fontFamily: ["Arvo", "serif"].join(","),
+  },
 });
 
 export default theme;
