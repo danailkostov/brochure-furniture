@@ -12,7 +12,8 @@ import CallIcon from "@material-ui/icons/Call";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { inputs } from "../components/constants";
+import { useForm } from "react-hook-form";
+// import { inputs } from "../components/constants";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textFieldStyle: {
     backgroundColor: "white",
+    borderRadius: "5px",
   },
   cardsContainer: {
     padding: "7rem 0px",
@@ -45,43 +47,76 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = () => {
   const classes = useStyles();
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmit = (data) => console.log(data);
+
   return (
     <Box className={classes.root}>
       <Grid container direction="column">
         <Grid item container>
-          <form className={classes.formStyle}>
-            <Typography align="center" gutterBottom paragraph>
-              SEND US A MESSAGE
+          <form className={classes.formStyle} onSubmit={handleSubmit(onSubmit)}>
+            <Typography align="center" variant="h5" gutterBottom paragraph>
+              НАПРАВИ ЗАЯВКА
             </Typography>
 
             <Grid item container spacing={2} justify="center">
-              {inputs.map((input) => {
-                const { id, name, label, placeholder } = input;
-                return (
-                  <Grid item xs={12} sm={4}>
-                    <TextField
-                      id={id}
-                      name={name}
-                      label={label}
-                      placeholder={placeholder}
-                      variant="outlined"
-                      fullWidth
-                      required
-                      margin="norma"
-                      color="secondary"
-                      className={classes.textFieldStyle}
-                    />
-                  </Grid>
-                );
-              })}
+              <Grid item xs={12} sm={4}>
+                <TextField
+                  id="name"
+                  name="name"
+                  placeholder="Въведете вашето име"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  color="secondary"
+                  className={classes.textFieldStyle}
+                  inputRef={register({ required: true, minLength: 2 })}
+                />
+                {errors.name && "Името е задължително"}
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <TextField
+                  id="email"
+                  name="email"
+                  placeholder="Въведете вашия имейл"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  color="secondary"
+                  className={classes.textFieldStyle}
+                  inputRef={register({
+                    required: true,
+                    pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+                  })}
+                />
+                {errors.email && "Имейла е задължителен"}
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <TextField
+                  id="phone"
+                  name="phone"
+                  placeholder="Въведете вашият номер"
+                  variant="outlined"
+                  fullWidth
+                  margin="normal"
+                  color="secondary"
+                  className={classes.textFieldStyle}
+                  inputRef={register({
+                    required: true,
+                    pattern: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s./0-9]*$/g,
+                    minLength: 9,
+                  })}
+                />
+                {errors.phone && "Телефонния номер е задължителен"}
+              </Grid>
 
               <Grid item xs={12}>
                 <TextField
                   id="message"
                   name="message"
-                  label="Message"
                   variant="outlined"
-                  placeholder="Enter your message"
+                  placeholder="Въведете вашето съобщение"
                   multiline
                   margin="normal"
                   size="medium"
@@ -89,6 +124,7 @@ const Contact = () => {
                   rows={10}
                   color="secondary"
                   className={classes.textFieldStyle}
+                  inputRef={register}
                 />
               </Grid>
               <Grid item xs={12} sm={2} justify="center">
@@ -123,11 +159,11 @@ const Contact = () => {
                 }
               />
             </Grid>
-            <Grid item xs={7} md={7}>
+            <Grid item xs={8} md={7}>
               <Typography variant="h5" gutterBottom>
-                MESSAGE US
+                ИЗПРАТЕТЕ НИ СЪОБЩЕНИЕ
               </Typography>
-              <Typography>testingmail@gmail.com</Typography>
+              <Typography>dia.movers@mail.bg</Typography>
             </Grid>
           </Grid>
           <Grid
@@ -148,11 +184,12 @@ const Contact = () => {
                 }
               />
             </Grid>
-            <Grid item xs={5}>
+            <Grid item xs={8}>
               <Typography variant="h5" gutterBottom>
-                CALL US
+                ОБАДЕТЕ НИ СЕ
               </Typography>
-              <Typography>(+1) 96 716 6879</Typography>
+              <Typography>(+359) 89 946 6574</Typography>
+              <Typography>(+359) 89 430 5105</Typography>
             </Grid>
           </Grid>
           <Grid item xs={12} md={4} lg={3} xl={2} container>
@@ -165,14 +202,14 @@ const Contact = () => {
                 }
               />
             </Grid>
-            <Grid item xs={8} md={8}>
+            <Grid item xs={9} md={8}>
               <Typography variant="h5" gutterBottom>
-                OPENING HOURS
+                РАБОТНО ВРЕМЕ
               </Typography>
               <Typography>
-                09:30 AM – 11:00 PM
+                09:00 – 18:00
                 <br />
-                Every Day
+                Понеделник - Събота
               </Typography>
             </Grid>
           </Grid>

@@ -48,19 +48,22 @@ const inputs = [
     id: "name",
     name: "name",
     label: "Name",
-    placeholder: "Enter your name",
+    placeholder: "Въведете вашето име",
+    type: "text",
   },
   {
     id: "email",
     name: "email",
     label: "Email",
-    placeholder: "Enter your email",
+    placeholder: "Въведе вашия имейл",
+    type: "email",
   },
   {
     id: "phone",
     name: "phone",
     label: "Phone",
-    placeholder: "Enter your phone number",
+    placeholder: "Въведете вашият номер",
+    type: "tel",
   },
 ];
 
