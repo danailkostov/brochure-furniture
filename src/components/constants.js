@@ -43,30 +43,6 @@ const gallery = [
   },
 ];
 
-const inputs = [
-  {
-    id: "name",
-    name: "name",
-    label: "Name",
-    placeholder: "Въведете вашето име",
-    type: "text",
-  },
-  {
-    id: "email",
-    name: "email",
-    label: "Email",
-    placeholder: "Въведе вашия имейл",
-    type: "email",
-  },
-  {
-    id: "phone",
-    name: "phone",
-    label: "Phone",
-    placeholder: "Въведете вашият номер",
-    type: "tel",
-  },
-];
-
 const comments = [
   {
     name: "Danail Kostov",
@@ -88,4 +64,4 @@ const comments = [
   },
 ];
 
-export { services, gallery, inputs, comments };
+export { services, gallery, comments };

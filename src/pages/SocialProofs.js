@@ -4,12 +4,9 @@ import galleryImg from "../images/gallery.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import { gallery } from "../components/constants";
 import Testimonials from "../components/Testimonials";
-// #322E18
 const useStyles = makeStyles((theme) => ({
   container: {
-    // background: theme.palette.primary.main,
     padding: "50px 20px",
-    // borderRadius: "5px",
     boxShadow: "#322E18 0px 2px 4px 0px, #322E18 0px 2px 16px 0px",
   },
   card: {

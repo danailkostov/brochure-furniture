@@ -13,7 +13,6 @@ import ScheduleIcon from "@material-ui/icons/Schedule";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useForm } from "react-hook-form";
-// import { inputs } from "../components/constants";
 
 const useStyles = makeStyles((theme) => ({
   root: {
