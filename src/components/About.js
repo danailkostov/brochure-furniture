@@ -30,7 +30,7 @@ const About = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.box}>
+    <Box className={classes.box} title='about'>
       <Container disableGutters>
         <Grid container className={classes.emptyItem} alignItems="center">
           <Grid item xs={12}>

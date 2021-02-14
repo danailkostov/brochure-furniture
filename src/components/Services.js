@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { services } from "../components/constants";
+import { services } from "../utility/constants";
 import {
   Container,
   Grid,
@@ -38,7 +38,7 @@ const Services = () => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.box}>
+    <Box className={classes.box} title="services">
       <Container>
         <Grid container className={classes.container}>
           {services.map((service) => {

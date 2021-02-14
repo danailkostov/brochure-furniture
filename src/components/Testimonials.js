@@ -8,7 +8,7 @@ import Card from "@material-ui/core/Card";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import FormatQuoteSharpIcon from "@material-ui/icons/FormatQuoteSharp";
-import { comments } from "../components/constants";
+import { comments } from "../utility/constants";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +38,7 @@ const Testimonials = () => {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} title='testimonials'>
       <Typography align="center" gutterBottom paragraph>
         <FormatQuoteSharpIcon />
         {comments[activeStep].comment}

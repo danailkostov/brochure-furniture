@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const Hero = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.contStyles}>
+    <Box className={classes.contStyles} title="hero">
       <Container style={{ height: "100%" }}>
         <Grid
           container

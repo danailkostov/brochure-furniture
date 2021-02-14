@@ -44,14 +44,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Contact = () => {
+const Contact = ({ saveData }) => {
   const classes = useStyles();
   const { register, handleSubmit, errors } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => saveData(data);
 
   return (
-    <Box className={classes.root}>
+    <Box className={classes.root} title="contact">
       <Grid container direction="column">
         <Grid item container>
           <form className={classes.formStyle} onSubmit={handleSubmit(onSubmit)}>
@@ -62,6 +62,8 @@ const Contact = () => {
             <Grid item container spacing={2} justify="center">
               <Grid item xs={12} sm={4}>
                 <TextField
+                  inputProps={{ "data-testid": "name-input" }}
+                  title="name"
                   id="name"
                   name="name"
                   placeholder="Въведете вашето име"
@@ -72,10 +74,12 @@ const Contact = () => {
                   className={classes.textFieldStyle}
                   inputRef={register({ required: true, minLength: 2 })}
                 />
-                {errors.name && "Името е задължително"}
+                {errors.name && <span role="alert">Името е задължително</span>}
               </Grid>
               <Grid item xs={12} sm={4}>
                 <TextField
+                  inputProps={{ "data-testid": "email-input" }}
+                  title="email"
                   id="email"
                   name="email"
                   placeholder="Въведете вашия имейл"
@@ -89,10 +93,14 @@ const Contact = () => {
                     pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g,
                   })}
                 />
-                {errors.email && "Имейла е задължителен"}
+                {errors.email && (
+                  <span role="alert">Имейла е задължителен</span>
+                )}
               </Grid>
               <Grid item xs={12} sm={4}>
                 <TextField
+                  inputProps={{ "data-testid": "phone-input" }}
+                  title="phone"
                   id="phone"
                   name="phone"
                   placeholder="Въведете вашият номер"
@@ -107,7 +115,9 @@ const Contact = () => {
                     minLength: 9,
                   })}
                 />
-                {errors.phone && "Телефонния номер е задължителен"}
+                {errors.phone && (
+                  <span role="alert">Телефонния номер е задължителен</span>
+                )}
               </Grid>
 
               <Grid item xs={12}>
@@ -128,6 +138,8 @@ const Contact = () => {
               </Grid>
               <Grid item xs={12} sm={2} justify="center">
                 <Button
+                  role='submit'
+                  name="button"
                   type="submit"
                   color="secondary"
                   variant="contained"

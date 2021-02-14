@@ -2,8 +2,8 @@ import { Container, Grid, Box, Typography } from "@material-ui/core";
 import React from "react";
 import galleryImg from "../images/gallery.jpg";
 import { makeStyles } from "@material-ui/core/styles";
-import { gallery } from "../components/constants";
-import Testimonials from "../components/Testimonials";
+import { gallery } from "../utility/constants";
+import Testimonials from "./Testimonials";
 const useStyles = makeStyles((theme) => ({
   container: {
     padding: "50px 20px",
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const Features = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.box}>
+    <Box className={classes.box} title='socialProofs'>
       <Container className={classes.container}>
         <Grid container justify="center">
           <Grid item xs={12}>
