@@ -15,7 +15,7 @@ The purpose of this website is to make fast review about what services the compa
 My main motivation about making this site - and to look really stunning - is that i made it for my first precious customer - my brother.
 
 ## Screenshots
-![Example screenshot](src\images\demo.png)
+![Example screenshot](demo.png)
 
 ## Technologies
 * React JS
