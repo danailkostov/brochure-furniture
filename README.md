@@ -11,14 +11,14 @@
 * [Contact](#contact)
 
 ## General info
-The purpose of this website is to make fast review about what services the company offer and after that we want the reader to have motivation for order.
-My main motivation about making this site - and to look really stunning - is that i made it for my first precious customer - my brother.
+The purpose of this website is to make quick overview of the services offered by the company. Аfter that we want the reader to have the motivation for order.
+When i started to make this website my main motivation was that i made it for my first precious customer - my brother.
 
 ## Screenshots
 ![Example screenshot](demo.png)
 
 ## Technologies
-* React JS
+* React JS - creact-react-app
 * Material-UI
 * Git
 
