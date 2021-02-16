@@ -1,4 +1,4 @@
-# Project Name
+# Furniture Website
 > Furniture Service Landing Page Website
 
 ## Table of contents
